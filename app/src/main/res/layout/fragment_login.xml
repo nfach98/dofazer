@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textAllCaps="false"
@@ -52,10 +52,10 @@
         android:id="@+id/forget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:textSize="14sp"
         android:textColor="@color/colorPrimary"
-        tools:text="Lupa kata sandi"
+        android:text="@string/forget_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
@@ -78,7 +78,7 @@
             android:layout_marginEnd="4dp"
             android:textSize="14sp"
             android:textColor="@color/colorPrimary"
-            android:text="Belum punya akun?"/>
+            android:text="@string/dont_have_account"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -86,7 +86,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            android:text="Daftar >"/>
+            android:text="@string/register_move"/>
 
     </LinearLayout>
 

@@ -15,9 +15,9 @@
             android:id="@+id/bgimage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             android:src="@drawable/img_morning"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:id="@+id/bg"
@@ -35,33 +35,50 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            tools:text="Selamat pagi, Albert!"
+            tools:text="Selamat pagi, "
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/bg"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/nickname" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Albert!"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bg"
+            app:layout_constraintStart_toEndOf="@id/selamat"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/headerTutor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="16dp"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="Tutor Saat Ini"
+            android:text="@string/cur_tutor"
             app:layout_constraintTop_toTopOf="@id/bg"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/rvTutorNow"/>
+            app:layout_constraintBottom_toTopOf="@id/rvTutorNow" />
 
         <ImageView
             android:id="@+id/moreTutor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="16dp"
             android:scaleType="center"
             android:src="@drawable/ic_circle_arrow_right"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/rvTutorNow"/>
+            app:layout_constraintBottom_toTopOf="@id/rvTutorNow" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTutorNow"
@@ -69,33 +86,33 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="24dp"
-            app:layout_constraintTop_toBottomOf="@id/headerTutor"/>
+            app:layout_constraintTop_toBottomOf="@id/headerTutor" />
 
         <TextView
             android:id="@+id/headerProd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
             android:layout_marginStart="16dp"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="Produktif Minggu Ini"
+            android:text="@string/week_prod"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvTutorNow"
-            app:layout_constraintBottom_toTopOf="@id/rvProd"/>
+            app:layout_constraintBottom_toTopOf="@id/rvProd" />
 
         <ImageView
             android:id="@+id/moreProd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
             android:layout_marginEnd="16dp"
             android:scaleType="center"
             android:src="@drawable/ic_circle_arrow_right"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/rvProd"/>
+            app:layout_constraintBottom_toTopOf="@id/rvProd" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvProd"

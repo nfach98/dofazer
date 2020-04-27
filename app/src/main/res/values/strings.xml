@@ -1,10 +1,22 @@
 <resources>
     <string name="app_name">Café do Fazer</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">Masuk</string>
     <string name="password">Kata sandi</string>
     <string name="username_email">Nama pengguna / email</string>
     <string name="cdf_logo">Cdf Logo</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="username">Nama pengguna</string>
+    <string name="register">Daftar</string>
+    <string name="dont_have_account">Belum punya akun?</string>
+    <string name="register_move"><![CDATA[Daftar >]]></string>
+    <string name="forget_password">Lupa kata sandi</string>
+    <string name="cur_tutor">Tutor Saat Ini</string>
+    <string name="week_prod">Produktif Minggu Ini</string>
+
+    <string-array name="list">
+        <item>Apple</item>
+        <item>Banana</item>
+    </string-array>
 </resources>

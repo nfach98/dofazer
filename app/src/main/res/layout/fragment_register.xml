@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Nama"
+        android:hint="@string/name"
         android:inputType="text"
         style="@style/CdfEditText"
         android:drawableStart="@drawable/ic_user"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         style="@style/CdfEditText"
         android:drawableStart="@drawable/ic_mail"
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Nama pengguna"
+        android:hint="@string/username"
         android:inputType="text"
         style="@style/CdfEditText"
         android:drawableStart="@drawable/ic_user"
@@ -64,8 +64,8 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Daftar"
-        android:textSize="16sp"
+        android:text="@string/register"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textAllCaps="false"
@@ -91,7 +91,7 @@
             android:layout_marginEnd="4dp"
             android:textSize="14sp"
             android:textColor="@color/colorPrimary"
-            android:text="Sudah punya akun?"/>
+            android:text="< Sudah punya akun?"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            android:text="Masuk"/>
+            android:text="@string/login"/>
 
     </LinearLayout>
 

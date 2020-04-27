@@ -4,6 +4,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#951F00</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="editTextStyle">@style/CdfEditText</item>
     </style>
 
     <style name="CdfEditText" parent="Widget.AppCompat.EditText">
@@ -14,6 +17,14 @@
         <item name="android:backgroundTint">#FFD6CB</item>
         <item name="android:drawablePadding">8dp</item>
         <item name="drawableTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="CdfSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/shape_rounded_4dp</item>
+        <item name="android:backgroundTint">#FFD6CB</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:elevation">2dp</item>
+        <item name="dropDownListViewStyle">@layout/view_spinner</item>
     </style>
 
 </resources>
