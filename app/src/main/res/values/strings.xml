@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Masuk</string>
+    <string name="password">Kata sandi</string>
+    <string name="username_email">Nama pengguna / email</string>
+    <string name="cdf_logo">Cdf Logo</string>
 </resources>

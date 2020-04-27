@@ -1,8 +1,19 @@
 <resources>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#951F00</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CdfEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/shape_rounded_4dp</item>
+        <item name="android:backgroundTint">#FFD6CB</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="drawableTint">@color/colorPrimary</item>
     </style>
 
 </resources>
