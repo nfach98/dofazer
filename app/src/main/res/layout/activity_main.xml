@@ -16,16 +16,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:mbn_circleColor="@color/colorPrimary"
-        app:mbn_selectedIconColor="@android:color/white"
-        app:mbn_rippleColor="#FF643C"
-        app:mbn_defaultIconColor="@color/colorPrimary"
-        app:mbn_backgroundBottomColor="@android:color/white"
-        android:elevation="4dp" />
+        android:background="@android:color/white"
+        app:elevation="4dp"
+        app:menu="@menu/menu_main"
+        app:itemIconTint="@color/main_icon"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

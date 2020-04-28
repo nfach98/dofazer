@@ -14,6 +14,8 @@
     <string name="forget_password">Lupa kata sandi</string>
     <string name="cur_tutor">Tutor Saat Ini</string>
     <string name="week_prod">Produktif Minggu Ini</string>
+    <string name="have_account"><![CDATA[< Sudah punya akun?]]></string>
+    <string name="splash_background">Splash background</string>
 
     <string-array name="list">
         <item>Apple</item>

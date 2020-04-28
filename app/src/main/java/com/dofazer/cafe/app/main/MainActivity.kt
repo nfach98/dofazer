@@ -1,16 +1,17 @@
 package com.dofazer.cafe.app.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dofazer.cafe.*
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.dofazer.cafe.R
+import com.dofazer.cafe.app.main.fragment.BerandaFragment
 import com.dofazer.cafe.app.main.fragment.ProduktifFragment
 import com.dofazer.cafe.app.main.fragment.SayaFragment
 import com.dofazer.cafe.app.main.fragment.ShiftFragment
-import com.dofazer.cafe.app.main.fragment.BerandaFragment
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,19 +25,32 @@ class MainActivity : AppCompatActivity() {
         }
 
         frame_main.adapter = pagerAdapter
-
-        nav_main.add(MeowBottomNavigation.Model(0, R.drawable.ic_home))
-        nav_main.add(MeowBottomNavigation.Model(1, R.drawable.ic_timer))
-        nav_main.add(MeowBottomNavigation.Model(2, R.drawable.ic_lightbulb))
-        nav_main.add(MeowBottomNavigation.Model(3, R.drawable.ic_circle_arrow_right)) //Sementara
-
-        nav_main.setOnClickMenuListener { swapFragment(it.id) }
-
-        nav_main.show(0)
-        swapFragment(0)
+        nav_main.setOnNavigationItemSelectedListener(this)
     }
 
     private fun swapFragment(position: Int) {
         frame_main.setCurrentItem(position, false)
+    }
+
+    override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+        when(p0.itemId){
+            R.id.menu_home -> {
+                swapFragment(0)
+                return true
+            }
+            R.id.menu_shift -> {
+                swapFragment(1)
+                return true
+            }
+            R.id.menu_prod -> {
+                swapFragment(2)
+                return true
+            }
+            R.id.menu_saya -> {
+                swapFragment(3)
+                return true
+            }
+        }
+        return false
     }
 }

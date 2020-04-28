@@ -6,28 +6,20 @@ import android.view.MotionEvent
 import androidx.viewpager.widget.ViewPager
 
 class NoSwipePager(context: Context, attrs: AttributeSet) : ViewPager(context, attrs) {
-    private var enabled: Boolean? = null
-
     init {
-        this.enabled = true
+        setPagingEnabled(false)
     }
 
     override fun onTouchEvent(ev: MotionEvent?): Boolean {
-        if(this.enabled == true) {
-            return super.onTouchEvent(ev)
-        }
-        return false
+        return super.isEnabled() && super.onTouchEvent(ev)
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        if(this.enabled == true) {
-            return super.onInterceptTouchEvent(ev)
-        }
-        return false
+        return super.isEnabled() && super.onInterceptTouchEvent(ev)
     }
 
-    fun setPagingEnabled(enabled: Boolean){
-        this.enabled = enabled
+    private fun setPagingEnabled(enabled: Boolean){
+        super.setEnabled(enabled)
     }
 
 }
